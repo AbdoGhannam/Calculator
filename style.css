@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.theme--1 {
+  --main--background-color: hsl(222, 26%, 31%);
+  --display--background-color: hsl(224, 36%, 15%);
+  --keyPad--background-color: hsl(223, 31%, 20%);
+  --lightBtns--background-color: hsl(30, 25%, 89%);
+  --lightBtns--background-hover-color: hsl(30, 25%, 100%);
+  --lightBtns--shadow-color: hsl(28, 16%, 65%);
+  --darkBtns--background-color: hsl(225, 21%, 49%);
+  --darkBtns--background-hover-color: hsl(225, 21%, 55%);
+  --darkBtns--shadow-color: hsl(224, 28%, 35%);
+  --equalBtn--background-color: hsl(6, 63%, 50%);
+  --equalBtn--background-hover-color: hsl(6, 63%, 55%);
+  --equalBtn--shadow-color: hsl(6, 70%, 34%);
+  --font-lightBtns-color: hsl(221, 14%, 31%);
+  --font-delResBtn-color: white;
+  --font-equal-color: white;
+  --font-main-color: white;
+  --toggle-color: hsl(6, 63%, 50%);
+}
+
+.theme--2 {
+  --main--background-color: hsl(0, 0%, 90%);
+  --display--background-color: hsl(0, 0%, 93%);
+  --keyPad--background-color: hsl(0, 5%, 81%);
+  --lightBtns--background-color: hsl(45, 7%, 89%);
+  --lightBtns--background-hover-color: hsl(45, 7%, 100%);
+  --lightBtns--shadow-color: hsl(35, 11%, 61%);
+  --darkBtns--background-color: hsl(185, 42%, 37%);
+  --darkBtns--background-hover-color: hsl(185, 42%, 45%);
+  --darkBtns--shadow-color: hsl(185, 58%, 25%);
+  --equalBtn--background-color: hsl(25, 98%, 40%);
+  --equalBtn--background-hover-color: hsl(25, 98%, 45%);
+  --equalBtn--shadow-color: hsl(25, 99%, 27%);
+  --font-lightBtns-color: hsl(60, 10%, 19%);
+  --font-delResBtn-color: white;
+  --font-equal-color: white;
+  --font-main-color: hsl(60, 10%, 19%);
+  --toggle-color: hsl(6, 63%, 50%);
+}
+
+.theme--3 {
+  --main--background-color: hsl(268, 75%, 9%);
+  --display--background-color: hsl(268, 71%, 12%);
+  --keyPad--background-color: hsl(268, 71%, 12%);
+  --lightBtns--background-color: hsl(268, 47%, 21%);
+  --lightBtns--background-hover-color: hsl(268, 47%, 27%);
+  --lightBtns--shadow-color: hsl(290, 70%, 36%);
+  --darkBtns--background-color: hsl(281, 89%, 26%);
+  --darkBtns--background-hover-color: hsl(281, 89%, 33%);
+  --darkBtns--shadow-color: hsl(285, 91%, 52%);
+  --equalBtn--background-color: hsl(176, 100%, 44%);
+  --equalBtn--background-hover-color: hsl(176, 100%, 55%);
+  --equalBtn--shadow-color: hsl(177, 92%, 70%);
+  --font-lightBtns-color: hsl(52, 100%, 62%);
+  --font-delResBtn-color: white;
+  --font-equal-color: hsl(198, 20%, 13%);
+  --font-main-color: hsl(52, 100%, 62%);
+  --toggle-color: hsl(176, 100%, 44%);
+}
+
+body {
+  background-color: var(--main--background-color);
+  color: white;
+}
+
+.theme-p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.main-calc {
+  width: 380px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  translate: 50% -50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  color: var(--font-main-color);
+}
+
+.theme-flex {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-screen {
+  background-color: var(--display--background-color);
+  color: var(--font-main-color);
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 32px;
+  position: relative;
+}
+
+.display-screen h3 {
+  position: absolute;
+  top: 24px;
+  left: 5px;
+  padding-left: 20px;
+}
+
+.display-screen:focus {
+  outline: none;
+}
+
+.key-pad {
+  background-color: var(--keyPad--background-color);
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 70px 70px 70px 70px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-start: auto;
+  gap: 20px;
+}
+
+.btn-reset {
+  width: 160px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.btn-equal {
+  width: 160px;
+}
+
+.btn {
+  border-radius: 6px;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 10px;
+}
+
+.btn-enter {
+  box-shadow: 0 3px var(--lightBtns--shadow-color);
+  background-color: var(--lightBtns--background-color);
+  color: var(--font-lightBtns-color);
+
+  width: 70px;
+  height: 40px;
+}
+
+.btn-enter:hover {
+  background-color: var(--lightBtns--background-hover-color);
+}
+
+.btn-dark {
+  box-shadow: 0 3px var(--darkBtns--shadow-color);
+  background-color: var(--darkBtns--background-color);
+  color: var(--font-delResBtn-color);
+  font-size: 20px;
+}
+
+.btn-dark:hover {
+  background-color: var(--darkBtns--background-hover-color);
+}
+
+.btn-equal {
+  box-shadow: 0 3px var(--equalBtn--shadow-color);
+  background-color: var(--equalBtn--background-color);
+  color: var(--font-equal-color);
+}
+
+.btn-equal:hover {
+  background-color: var(--equalBtn--background-hover-color);
+}
+/* TOGGLE TOGGLE TOGGLE */
+
+.switch {
+  position: relative;
+  height: 20px;
+  width: 60px;
+  background-color: var(--keyPad--background-color);
+  border-radius: 32px;
+}
+
+.switch-label {
+  font-weight: bold;
+  position: absolute;
+  width: 100px;
+  line-height: 32px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.switch-label-1 {
+  top: -25px;
+  right: -50px;
+}
+
+.switch-label-2 {
+  top: -25px;
+  right: -67.5px;
+}
+
+.switch-label-3 {
+  top: -25px;
+  right: -85px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch-label {
+  color: var(--font-main-color);
+  transition: 0.15s ease-out;
+  transition-property: color, text-shadow;
+}
+
+.switch-input:checked + .switch-label-1 ~ .switch-selector {
+  transform: translateX(-250%);
+}
+.switch-input:checked + .switch-label-2 ~ .switch-selector {
+  transform: translateX(-100%);
+}
+.switch-input:checked + .switch-label-3 ~ .switch-selector {
+  transform: translateX(50%);
+}
+
+.switch-selector {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  translate: 50% -50%;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: var(--toggle-color);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  background: black url(preloader.gif) no-repeat center center;
+  background-size: 10%;
+}

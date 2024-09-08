@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+    </style>
+
+    <title>Calculator app</title>
+  </head>
+  <body class="">
+    <div class="preloader"></div>
+    <main class="main-calc">
+      <div class="nav">
+        <h2>calc</h2>
+        <div class="theme-flex">
+          <p class="theme-p">THEME</p>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="switch">
+                <input
+                  id="switch-y"
+                  name="tripple"
+                  type="radio"
+                  value="1"
+                  class="switch-input"
+                  checked
+                />
+                <label for="switch-y" class="switch-label switch-label-1"
+                  >1</label
+                >
+                <input
+                  id="switch-i"
+                  name="tripple"
+                  type="radio"
+                  value="2"
+                  class="switch-input"
+                />
+                <label for="switch-i" class="switch-label switch-label-2"
+                  >2</label
+                >
+                <input
+                  id="switch-n"
+                  name="tripple"
+                  type="radio"
+                  value="3"
+                  class="switch-input"
+                />
+                <label for="switch-n" class="switch-label switch-label-3"
+                  >3</label
+                >
+                <span class="switch-selector"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display-screen">
+        <h3 class="result"></h3>
+      </div>
+      <div class="key-pad">
+        <button class="btn btn-number btn-enter">7</button>
+        <button class="btn btn-number btn-enter">8</button>
+        <button class="btn btn-number btn-enter">9</button>
+        <button class="btn btn-delete btn-dark">DEL</button>
+        <button class="btn btn-number btn-enter">4</button>
+        <button class="btn btn-number btn-enter">5</button>
+        <button class="btn btn-number btn-enter">6</button>
+        <button class="btn btn-operation btn-enter">+</button>
+        <button class="btn btn-number btn-enter">1</button>
+        <button class="btn btn-number btn-enter">2</button>
+        <button class="btn btn-number btn-enter">3</button>
+        <button class="btn btn-operation btn-enter">-</button>
+        <button class="btn decemal btn-enter">.</button>
+        <button class="btn btn-number btn-enter zero">0</button>
+        <button class="btn btn-operation btn-enter">/</button>
+        <button class="btn btn-operation btn-enter">*</button>
+        <button class="btn btn-reset btn-dark">RESET</button>
+        <button class="btn btn-equal">=</button>
+      </div>
+    </main>
+    <script src="calcScript.js"></script>
+  </body>
+</html>
